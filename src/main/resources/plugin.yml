@@ -1,0 +1,4 @@
+name: Lifis
+version: '${version}'
+main: org.jadestudios.plugins.lifis.Lifis
+api-version: 1.17
