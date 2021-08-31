@@ -17,7 +17,7 @@ public class Lifis extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         saveDefaultConfig();
-        if (getConfig().getBoolean("use-texture-pack") == true) {
+        if (getConfig().getBoolean("use-texture-pack")) {
             getServer().getPluginManager().registerEvents(new LifisPackHandler(this), this);
         }
 
