@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jadestudios.plugins.lifis.Commands.ReloadConfig;
 import org.jadestudios.plugins.lifis.Commands.ResetHearts;
+import org.jadestudios.plugins.lifis.Commands.ReviveCommand;
 import org.jadestudios.plugins.lifis.Events.LifisDeathHandler;
 import org.jadestudios.plugins.lifis.Events.LifisExtraHeartHandler;
 import org.jadestudios.plugins.lifis.Events.LifisPackHandler;
@@ -26,6 +27,7 @@ public class Lifis extends JavaPlugin {
 
         getCommand("reloadconfig").setExecutor(new ReloadConfig(this));
         getCommand("reset").setExecutor(new ResetHearts());
+        getCommand("revive").setExecutor(new ReviveCommand());
 
         Bukkit.addRecipe(heartRecipe.heartRecipe(this));
 
