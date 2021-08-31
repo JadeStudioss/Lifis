@@ -27,7 +27,7 @@ public class Lifis extends JavaPlugin {
 
         getCommand("reloadconfig").setExecutor(new ReloadConfig(this));
         getCommand("reset").setExecutor(new ResetHearts());
-        getCommand("revive").setExecutor(new ReviveCommand());
+        if (getConfig().getBoolean("enable-revive")) getCommand("revive").setExecutor(new ReviveCommand());
 
         Bukkit.addRecipe(heartRecipe.heartRecipe(this));
 
