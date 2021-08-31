@@ -1,6 +1,7 @@
 package org.jadestudios.plugins.lifis;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jadestudios.plugins.lifis.Commands.ResetHearts;
 import org.jadestudios.plugins.lifis.Events.LifisDeathHandler;
 
 public class Lifis extends JavaPlugin {
@@ -11,6 +12,7 @@ public class Lifis extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         getServer().getPluginManager().registerEvents(new LifisDeathHandler(), this);
+        getCommand("reset").setExecutor(new ResetHearts());
     }
 
     @Override

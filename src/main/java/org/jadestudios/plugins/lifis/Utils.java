@@ -19,4 +19,10 @@ public class Utils {
         assert healthModifier != null;
         return healthModifier.getValue();
     }
+
+    public void setHealth(Player player, Double amount) {
+        AttributeInstance health = player.getAttribute(Attribute.GENERIC_MAX_HEALTH);
+        health.setBaseValue(amount);
+        return;
+    }
 }
