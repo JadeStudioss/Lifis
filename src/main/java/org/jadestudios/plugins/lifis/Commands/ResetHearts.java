@@ -25,17 +25,17 @@ public class ResetHearts implements CommandExecutor {
 
                 Utils utils = new Utils();
                 Double ddouble = utils.getHealth(player);
-                Double startingNumber = -10.0;
+                Double startingNumber = -500.0;
                 while (startingNumber < 11.0) {
                     if (startingNumber + ddouble == 20.0) {
                         utils.modifyHealth(player, startingNumber);
                         startingNumber = 11.0;
-                        player.sendMessage(ChatColor.RED + "Reset.");
+                        player.sendMessage(ChatColor.GREEN + "Reset.");
                         return true;
                     }
-                    startingNumber = startingNumber + 2.0;
+                    startingNumber = startingNumber + 1.0;
                 }
-
+                player.sendMessage(ChatColor.RED + "ERROR");
                 return true;
             }
         }
